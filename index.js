@@ -6,7 +6,7 @@ const port = process.env.PORT || 3001;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/api/message', (req, res) => {
     res.json({ message: 'Hello from node.js backend!'});
 });
 
