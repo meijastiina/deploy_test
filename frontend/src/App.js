@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    axios.get('https://deploytest-backend.azurewebsites.net/api/message')
+    axios.get(`${process.env.REACT_APP_API}/api/message`)
       .then(response => {
         setMessage(response.data.message);
       })
